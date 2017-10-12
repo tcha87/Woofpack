@@ -26,7 +26,7 @@
            
 
             <div class="btn-search">
-              <button class="btn btn-primary" type="submit">Find Sitter</button>
+              <button class="btn btn-primary" type="submit"><a href="{{url('/gmaps')}}">Find Sitter</a></button>
               <a href="job-list-1.html">Advanced Job Search</a>
             </div>
           </form>

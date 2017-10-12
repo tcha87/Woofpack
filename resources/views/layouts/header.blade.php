@@ -12,6 +12,8 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="http://maps.google.com/maps/api/js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
        <style >
          
@@ -36,7 +38,14 @@ body::-webkit-scrollbar-track
     color: #555;
     background-color: transparent;
 }
-       </style>
+
+  .item-block header img {
+    width: 124px;
+    margin-right: 30px;
+    float: left;
+}
+    </style>
+       
     </head>
    
         <body class="nav-on-header smart-nav">
@@ -71,6 +80,10 @@ body::-webkit-scrollbar-track
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                  <li>
+                                    
+                                    <a href="{{url('/profile/1')}}">View Profile</a>
+                                  </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

@@ -19,4 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile/{id}', 'ProfileController@show')->name('show');
+//Route::get('/profile/{id}', 'Controller@show')->name('show');
+
+
+Route::resource('profile', 'ProfileController');
+
+Route::get('gmaps', 'HomeController@gmaps');

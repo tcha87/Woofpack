@@ -1,12 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Auth;
 use App\User;
-use App\Profile;
 use Illuminate\Http\Request;
-
+use Auth;
 class ProfileController extends Controller
 {
     /**
@@ -14,21 +11,19 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
-      public function __construct()
+    public function index()
     {
-        $this->middleware('auth');
+        //
     }
 
 
-
-     public function getUserByUsername($username)
+     public function getUserByUsername($id)
     {
-        return User::with('profile')->wherename($username)->firstOrFail();
+        
+        $id = Auth::user()->id;
+
+        return User::with('profile')->whereid($id)->firstOrFail();
     }
-
-
 
 
     /**
@@ -55,23 +50,35 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Profile $profile)
+    public function show($id)
     {
-         
-        $logid = Auth::user()->id;
-        dd($logid);
+      try {
+            $user = $this->getUserByUsername($id);
+        } catch (ModelNotFoundException $exception) {
+            abort(404);
+        }
+
+
+
+            //dd($user);
+        $data = [
+            'user'         => $user,
+          
+        ];
+
+        return view('profiles.show')->with($data);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Profile $profile)
+    public function edit($id)
     {
         //
     }
@@ -80,10 +87,10 @@ class ProfileController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Profile $profile)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -91,10 +98,10 @@ class ProfileController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Profile  $profile
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Profile $profile)
+    public function destroy($id)
     {
         //
     }

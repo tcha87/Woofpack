@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+use DB;
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('welcome');
+    }
+
+     public function gmaps()
+    {
+        $locations = DB::table('location')->get();
+        //dd ($locations);
+        return view('gmaps',compact('locations'));
     }
 }
