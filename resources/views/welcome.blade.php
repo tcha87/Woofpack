@@ -1,5 +1,42 @@
    @include('layouts/header')
 
+<style type="text/css">
+    .input-controls {
+      margin-top: 10px;
+      border: 1px solid transparent;
+      border-radius: 2px 0 0 2px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      height: 32px;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    #searchInput {
+      background-color: #fff;
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+      margin-left: 12px;
+      padding: 0 11px 0 13px;
+      text-overflow: ellipsis;
+      width: 50%;
+    }
+    #searchInput:focus {
+      border-color: #4d90fe;
+    }
+</style>
+
+
+A
+<!DOCTYPE html>
+<html>
+<head>
+<title>Autocomplete search address form using google map and get data into form example </title>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+</head>
+<body>
+
+
 
     <!-- Site header -->
     <header class="site-header size-lg text-center" style="background-image: url({{asset('img/bg-banner1.jpg')}})">
@@ -27,7 +64,7 @@
 
             <div class="btn-search">
               <button class="btn btn-primary" type="submit"><a href="{{url('/gmaps')}}">Find Sitter</a></button>
-              <a href="job-list-1.html">Advanced Job Search</a>
+             
             </div>
           </form>
         </div>
@@ -35,6 +72,13 @@
       </div>
     </header>
     <!-- END Site header -->
+   <!-- <input id="searchInput" class="input-controls" type="text" placeholder="Enter a location">
+ <div class="map" id="map" style="width: 100%; height: 300px;"></div>
+ <div class="form_area">
+     <input type="text" name="location" id="location">
+     <input type="text" name="lat" id="lat">
+     <input type="text" name="lng" id="lng">
+ </div> -->
 
 
     <!-- Main container -->
@@ -125,7 +169,7 @@
       
 
       <!-- Newsletter -->
-      <section class="bg-img text-center" style="background-image: url({{asset('img/bg-facts.jpg')}})">
+      <section class="bg-img text-center" style="background-image: url({{asset('img/footer_visual.svg')}})">
         <div class="container">
           <h2><strong>Subscribe</strong></h2>
           <h6 class="font-alt">Get weekly top new jobs delivered to your inbox</h6>

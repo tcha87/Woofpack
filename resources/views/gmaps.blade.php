@@ -69,6 +69,9 @@
            <div class="col-xs-12">
               <a class="item-block" href="{{url('/profile/1')}}">
                 <header>
+                  <div style="background-image: url({{asset('img/profile.png')}})">
+                    &nbsp;
+                  </div>
                   <img src="{{asset('img/profile.png')}}" alt="">
                   <div class="hgroup">
                     <h4>{{$location->city}}</h4>
