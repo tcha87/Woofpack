@@ -27,14 +27,9 @@
 </style>
 
 
-A
-<!DOCTYPE html>
-<html>
-<head>
-<title>Autocomplete search address form using google map and get data into form example </title>
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
-</head>
-<body>
+
 
 
 

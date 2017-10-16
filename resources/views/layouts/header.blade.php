@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Woofpack </title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -136,6 +136,7 @@ body::-webkit-scrollbar-track
           <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+                            <a class="btn btn-sm btn-primary" href="{{url('/sitter_register')}}">Sitter Earlybird</a>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
