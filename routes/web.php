@@ -26,8 +26,8 @@ Route::resource('profile', 'ProfileController');
 
 Route::get('gmaps', 'HomeController@gmaps');
 
-Route::get('sitter_register', 'SitterRegisterController@showRegistrationForm');
-Route::post('sitter_register', 'SitterRegisterController@register');
+Route::get('sitter-register', 'SitterRegisterController@showRegistrationForm');
+Route::post('sitter-register', 'SitterRegisterController@register');
 
 Route::get('/sitter_home', function(){
   return view('sitter.home');

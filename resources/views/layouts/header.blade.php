@@ -136,7 +136,7 @@ body::-webkit-scrollbar-track
           <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <a class="btn btn-sm btn-primary" href="{{url('/sitter_register')}}">Sitter Earlybird</a>
+                            <a class="btn btn-sm btn-primary" href="{{url('/sitter-register')}}">Sitter Earlybird</a>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else

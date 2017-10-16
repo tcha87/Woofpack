@@ -26,6 +26,8 @@
 <body>
   <div class="image-container set-full-height" style="background-image: url({{asset('img/bg-facts.jpg')}})"> 
   
+
+ <!--  //https://ysk-override.com/Multi-Auth-in-laravel-54-Registration-20170202/ -->
     
       <div class="container">
           <div class="row">
@@ -38,8 +40,10 @@
                     <!--        You can switch " data-color="red" "  with one of the next bright colors: "blue", "azure", "red", "red"       -->
 
                           <div class="wizard-header">
-                              <h3 class="wizard-title">Account details</h3>
-                              <p class="category">These are your account details , for logging into the system</p>
+                              <h3 class="wizard-title">Build your Sitter profile</h3>
+                              <p class="category">Tell us more about yourself to start building your Woofpack sitter listing.</p>
+
+<p class="category" >Put yourselves in an dog owner's shoes. You'd want someone who's trustworthy and reliable!</p>
                           </div>
                 <div class="wizard-navigation">
                   <div class="progress-with-circle">
@@ -82,6 +86,8 @@
                 </div>
                             <div class="tab-content">
                                 <div class="tab-pane" id="location">
+                                {{Form::open(['route' => 'web_tools.store'])}}
+                                  {{ csrf_field() }}
                                   <div class="row">
                                       <div class="col-sm-12">
                                           <h5 class="info-text"> Let's start with the basic details</h5>
@@ -89,7 +95,7 @@
                                       <div class="col-sm-5 col-sm-offset-1">
                                           <div class="form-group">
                                               <label>Your Name</label>
-                                              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Where is your place located?">
+                                               <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                                           </div>
                                       </div>
                                       <div class="col-sm-5">
@@ -199,12 +205,16 @@
                             <div class="wizard-footer">
                                 <div class="pull-right">
                                       <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-                                      <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+                                      <input type='submit' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+                                      <button type="submit" class="btn btn-finish btn-fill btn-danger btn-wd">
+                                    Register Seller
+                                </button>
                   </div>
 
                                   <div class="pull-left">
                                       <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Previous' />
                                   </div>
+                                </form>
                                   <div class="clearfix"></div>
                             </div>
                         </form>
@@ -226,7 +236,7 @@
   <!--  Plugin for the Wizard -->
   <script src="{{asset('js/paper-bootstrap-wizard.js')}}" type="text/javascript"></script>
 
-  <!--  More information about jquery.validate here: http://jqueryvalidation.org/  -->
+<!--   <!--  More information about jquery.validate here: http://jqueryvalidation.org/  -->
   <script src="{{asset('js/jquery.validate.min.js')}}" type="text/javascript"></script>
 
 </html>
