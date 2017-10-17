@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+          'web_seller' => [
+            'driver' => 'session',
+            'provider' => 'sitters',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'sitters' => [
+            'driver' => 'eloquent',  //We are using eloquent model
+            'model' => App\Sitter::class,
         ],
 
         // 'users' => [

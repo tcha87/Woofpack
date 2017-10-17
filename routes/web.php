@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('gmaps', 'HomeController@gmaps');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,11 +25,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('profile', 'ProfileController');
 
-Route::get('gmaps', 'HomeController@gmaps');
+
 
 Route::get('sitter-register', 'SitterRegisterController@showRegistrationForm');
-Route::post('sitter-register', 'SitterRegisterController@register');
+
+
+Route::post('sitter-register',[
+    'uses' => 'SitterRegisterController@register', 
+    'as' => 'sitter.register'
+]);
+//Route::post('sitter-register', 'SitterRegisterController@register');
 
 Route::get('/sitter_home', function(){
-  return view('sitter.home');
+  return view('sitters.dashboard');
 });

@@ -135,14 +135,14 @@ body::-webkit-scrollbar-track
         <div class="pull-right user-login">
           <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <a class="btn btn-sm btn-primary" href="{{url('/sitter-register')}}">Sitter Earlybird</a>
+                        @if (Auth::guest() && Auth::guard('web_seller')->guest())
+                            <a style ="margin-top:10px;"class="btn btn-sm btn-primary" href="{{url('/sitter-register')}}">Sitter Earlybird</a>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                     <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -163,6 +163,8 @@ body::-webkit-scrollbar-track
                                     </li>
                                 </ul>
                             </li>
+
+
                         @endif
                     </ul>
         </div>
@@ -194,4 +196,5 @@ body::-webkit-scrollbar-track
     </nav>
     <!-- END Navigation bar -->
 
-
+<!-- 
+https://medium.com/hello-laravel/multiple-authentication-system-laravel-5-4-ac94c759638a -->
