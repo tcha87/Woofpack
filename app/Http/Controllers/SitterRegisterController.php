@@ -11,7 +11,13 @@ use Auth;
 class SitterRegisterController extends Controller
 {
 
-	protected $redirectPath = 'sitter_home';
+	public function __construct()
+    {
+      $this->middleware('guest:sitter');
+    }
+    
+
+	protected $redirectPath = 'sitters.dashboard';
 
    public function showRegistrationForm()
   {
@@ -23,6 +29,22 @@ class SitterRegisterController extends Controller
   {
       return view('sitters.login');
   }
+
+    public function login(Request $request)
+    {
+      // Validate the form data
+      $this->validate($request, [
+        'email'   => 'required|email',
+        'password' => 'required|min:6'
+      ]);
+      
+      if (Auth::guard('sitter')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+       
+        return redirect()->intended(route('sitters.dashboard'));
+      }
+     
+      return redirect()->back()->withInput($request->only('email', 'remember'));
+    }
 
     public function register(Request $request)
     {
@@ -64,7 +86,7 @@ class SitterRegisterController extends Controller
    
     protected function guard()
    {
-       return Auth::guard('web_seller');
+       return Auth::guard('sitter');
    }
 
  

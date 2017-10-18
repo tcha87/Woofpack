@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Sitter extends Authenticatable
 {
 
+	protected $guard = 'sitter';
+
 
   protected $fillable = [
       'name', 'email', 'password','phone_number','whatsapp_number','res_address','city','postcode','dogs','outdoor','dogwalks','food','bio',

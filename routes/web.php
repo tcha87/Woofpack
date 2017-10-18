@@ -40,12 +40,21 @@ Route::get('sitters/login',[
     'as' => 'sitters.login'
 ]);
 
+Route::post('sitters/login',[
+    'uses' => 'SitterRegisterController@login', 
+    'as' => 'sitters.login'
+]);
+
 
 //Route::get('sitters/login', 'SitterRegisterController@showLoginForm');
 
 
 //Route::post('sitter-register', 'SitterRegisterController@register');
 
-Route::get('/sitter_home', function(){
-  return view('sitters.dashboard');
-});
+
+
+Route::get('sitters/dashboard',[
+    'uses' =>'SitterController@index', 
+    'as' => 'sitters.dashboard'
+]);
+

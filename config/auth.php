@@ -41,14 +41,19 @@ return [
             'provider' => 'users',
         ],
 
-          'web_seller' => [
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+        ],
+
+        'sitter' => [
             'driver' => 'session',
             'provider' => 'sitters',
         ],
 
-        'api' => [
+        'sitter-api' => [
             'driver' => 'token',
-            'provider' => 'users',
+            'provider' => 'sitters',
         ],
     ],
 
@@ -75,8 +80,8 @@ return [
             'model' => App\User::class,
         ],
 
-        'sitters' => [
-            'driver' => 'eloquent',  //We are using eloquent model
+         'sitters' => [
+            'driver' => 'eloquent',
             'model' => App\Sitter::class,
         ],
 
@@ -106,6 +111,12 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+        ],
+
+        'sitters' => [
+            'provider' => 'sitters',
+            'table' => 'password_resets',
+            'expire' => 15,
         ],
     ],
 

@@ -46,7 +46,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
 
-                            <li><a class="btn btn-next btn-fill btn-danger btn-wd" style ="color:#fff;" href="{{ route('sitters.login') }}">Already Registered ?</a></li>
+                            <li><a class="btn btn-next btn-fill btn-danger btn-wd" style ="color:#fff;" href="{{ route('sitters.login') }}"> Already Registered ?</a></li>
 
                         @else
                             <li class="dropdown">

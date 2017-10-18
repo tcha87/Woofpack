@@ -136,16 +136,15 @@ body::-webkit-scrollbar-track
          
           <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guard('web_seller')->guest())
+                        @if (Auth::guard('sitter')->guest())
 
-                            <!--Seller Login and registration Links -->
+                        
 
-                            <li><a href="{{ url('/seller_login') }}">Seller Login</a></li>
-                            <li><a href="{{ url('/seller_register') }}">Seller Registration</a></li>
+                          
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::guard('web_seller')->user()->name }} <span class="caret"></span>
+                                    {{ Auth::guard('sitter')->user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -156,7 +155,7 @@ body::-webkit-scrollbar-track
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ url('/seller_logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
@@ -217,7 +216,7 @@ body::-webkit-scrollbar-track
     <!-- Page header -->
     <header class="page-header" style="background-image: url({{asset('img/bg-factsd.jpg')}})">
       <div class="container page-name">
-        <h1 class="text-center">Welcome  {{ Auth::guard('web_seller')->user()->name }}</h1>
+        <h1 class="text-center">Welcome  {{ Auth::guard('sitter')->user()->name }}</h1>
         <p class="lead text-center">This is a preview of you Woofpack Profile displayed on the site , you can edit profile</p>
       </div>
 
@@ -240,7 +239,7 @@ body::-webkit-scrollbar-track
           </div>
 
           <div class="form-group col-xs-12">
-            <textarea class="form-control" rows="3" placeholder="{{ Auth::guard('web_seller')->user()->bio }}"></textarea>
+            <textarea class="form-control" rows="3" placeholder="{{ Auth::guard('sitter')->user()->bio }}"></textarea>
           </div>
 
           <div class="form-group col-xs-12">
