@@ -17,7 +17,11 @@ class SitterRegisterController extends Controller
     }
     
 
+<<<<<<< HEAD
 	protected $redirectPath = 'sitters/dashboard';
+=======
+	protected $redirectPath = 'sitters.dashboard';
+>>>>>>> master
 
    public function showRegistrationForm()
   {
