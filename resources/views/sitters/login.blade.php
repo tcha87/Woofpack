@@ -116,10 +116,8 @@
                     <!--        You can switch " data-color="red" "  with one of the next bright colors: "blue", "azure", "red", "red"       -->
 
                           <div class="wizard-header">
-                              <h3 class="wizard-title">Build your Sitter profile</h3>
-                              <p class="category">Tell us more about yourself to start building your Woofpack sitter listing.</p>
-
-<p class="category" >Put yourselves in an dog owner's shoes. You'd want someone who's trustworthy and reliable!</p>
+                              <h3 class="wizard-title">Login into your Account </h3>
+                             
                           </div>
                 <div class="wizard-navigation">
                   <div class="progress-with-circle">
@@ -134,63 +132,32 @@
                         Account
                       </a>
                     </li>
-                                  <li>
-                      <a href="#type" data-toggle="tab">
-                        <div class="icon-circle">
-                          <i class="ti-direction-alt"></i>
-                        </div>
-                        Location
-                      </a>
-                    </li>
-                                  <li>
-                      <a href="#facilities" data-toggle="tab">
-                        <div class="icon-circle">
-                          <i class="ti-panel"></i>
-                        </div>
-                        Facilities
-                      </a>
-                    </li>
-                                  <li>
-                      <a href="#description" data-toggle="tab">
-                        <div class="icon-circle">
-                          <i class="ti-comments"></i>
-                        </div>
-                        You short bio
-                      </a>
-                    </li>
+                        
                               </ul>
                 </div>
                             <div class="tab-content">
                                 <div class="tab-pane" id="location">
 
                                   <div class="row">
-                                      <div class="col-sm-12">
-                                          <h5 class="info-text"> Let's start with the basic details</h5>
-                                    </div>
-                                      <div class="col-sm-5 col-sm-offset-1">
-                                          <div class="form-group">
-                                              <label>Your Name</label>
-                                               <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                                          </div>
-                                      </div>
-                                      <div class="col-sm-5">
+                                    
+                                      
+                                      <div class="col-sm-8 col-sm-offset-2">
                                           <div class="form-group">
                                               <label>Email address</label>
                                               <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                                           </div>
                                       </div>
-                                      <div class="col-sm-5 col-sm-offset-1">
+                                      <div class="col-sm-8 col-sm-offset-2">
                                           <div class="form-group">
                                               <label>Password</label>
                                               <input type="password" name ="password" class="form-control" id="exampleInputEmail1" placeholder="Password?" required>
                                           </div>
                                       </div>
-                                      <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Confirm Password</label>
-                                              <input type="password" class="form-control" id="exampleInputEmail1" required>
-                                          </div>
-                                      </div>
+                                      	 <div class="col-sm-8 col-sm-offset-2 text-center">
+                                         <button type="submit" class="btn btn-finish btn-fill btn-danger btn-wd">
+                                    Login 
+                                </button>
+                                     </div>
                                   </div>
                                 </div>
                                 <div class="tab-pane" id="type">
@@ -323,21 +290,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="wizard-footer">
-                                <div class="pull-right">
-                                      <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-                                      <input type='submit' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
-                                      <button type="submit" class="btn btn-finish btn-fill btn-danger btn-wd">
-                                    Finish Profile
-                                </button>
-                  </div>
-
-                                  <div class="pull-left">
-                                      <input type='button' class='btn btn-previous btn-default btn-wd' name='previous' value='Previous' />
-                                  </div>
-
-                                  <div class="clearfix"></div>
-                            </div>
+                      
                         </form>
                     </div>
                 </div> <!-- wizard container -->

@@ -18,6 +18,12 @@ class SitterRegisterController extends Controller
       return view('sitters.register');
   }
 
+
+   public function showLoginForm()
+  {
+      return view('sitters.login');
+  }
+
     public function register(Request $request)
     {
 

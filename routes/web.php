@@ -27,13 +27,23 @@ Route::resource('profile', 'ProfileController');
 
 
 
-Route::get('sitter-register', 'SitterRegisterController@showRegistrationForm');
+Route::get('sitters/sitter-register', 'SitterRegisterController@showRegistrationForm');
 
 
-Route::post('sitter-register',[
+Route::post('sitters/sitter-register',[
     'uses' => 'SitterRegisterController@register', 
     'as' => 'sitter.register'
 ]);
+
+Route::get('sitters/login',[
+    'uses' => 'SitterRegisterController@showLoginForm', 
+    'as' => 'sitters.login'
+]);
+
+
+//Route::get('sitters/login', 'SitterRegisterController@showLoginForm');
+
+
 //Route::post('sitter-register', 'SitterRegisterController@register');
 
 Route::get('/sitter_home', function(){
