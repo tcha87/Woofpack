@@ -223,84 +223,61 @@ body::-webkit-scrollbar-track
       <div class="container">
 
         <div class="row">
+             <div class ="col-sm-12">
+                <header class="section-header">
+            
+              <h2><img style ="margin-right:20px;" src="{{asset('img/check-form.png')}}" alt="">Personal Information</h2>
+              
+            </header>
+             </div>
           <div class="form-group col-xs-12 col-sm-6">
-            <input type="text" class="form-control input-lg" placeholder="Job title, e.g. Front-end developer">
+
+
+             <label>Display name</label>
+            <input type="text" class="form-control input-lg" value ="{{ Auth::guard('sitter')->user()->name }} ">
           </div>
 
-          <div class="form-group col-xs-12 col-sm-6">
-            <select class="form-control selectpicker">
-              <option>Select a company</option>
-              <option>Google</option>
-              <option>Microsoft</option>
-              <option>Apple</option>
-              <option>Facebook</option>
-            </select>
-            <a class="help-block" href="company-add.html">Add new company</a>
+         <div class="form-group col-xs-12 col-sm-6">
+              <label>Email address</label>
+            <input type="text" class="form-control input-lg" disabled value ="{{ Auth::guard('sitter')->user()->email }} ">
           </div>
 
           <div class="form-group col-xs-12">
+             <label>Bio</label>
             <textarea class="form-control" rows="3" placeholder="{{ Auth::guard('sitter')->user()->bio }}"></textarea>
           </div>
 
-          <div class="form-group col-xs-12">
-            <input type="text" class="form-control" placeholder="Application URL">
-          </div>
+         
 
           <div class="form-group col-xs-12 col-sm-6 col-md-4">
+             <label>Phone number</label>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+               
+              <input type="text" class="form-control" value ="{{ Auth::guard('sitter')->user()->phone_number }} ">
+            </div>
+          </div>
+
+           <div class="form-group col-xs-12 col-sm-6 col-md-4">
+             <label>Whatsapp number</label>
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon"><i class="fa fa-whatsapp"></i></span>
+               
+              <input type="text" class="form-control" value ="{{ Auth::guard('sitter')->user()->whatsapp_number }} ">
+            </div>
+          </div>
+
+           <div class="form-group col-xs-12 col-sm-6 col-md-4">
+             <label>City</label>
             <div class="input-group input-group-sm">
               <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-              <input type="text" class="form-control" placeholder="Location, e.g. Melon Park, CA">
+               
+              <input type="text" class="form-control" value ="{{ Auth::guard('sitter')->user()->city }} ">
             </div>
           </div>
 
-          <div class="form-group col-xs-12 col-sm-6 col-md-4">
-            <div class="input-group input-group-sm">
-              <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
-              <select class="form-control selectpicker">
-                <option>Full time</option>
-                <option>Part time</option>
-                <option>Internship</option>
-                <option>Freelance</option>
-                <option>Remote</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group col-xs-12 col-sm-6 col-md-4">
-            <div class="input-group input-group-sm">
-              <span class="input-group-addon"><i class="fa fa-money"></i></span>
-              <input type="text" class="form-control" placeholder="Salary">
-            </div>
-          </div>
-
-          <div class="form-group col-xs-12 col-sm-6 col-md-4">
-            <div class="input-group input-group-sm">
-              <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
-              <input type="text" class="form-control" placeholder="Working hours, e.g. 40">
-              <span class="input-group-addon">hours / week</span>
-            </div>
-          </div>
-
-          <div class="form-group col-xs-12 col-sm-6 col-md-4">
-            <div class="input-group input-group-sm">
-              <span class="input-group-addon"><i class="fa fa-flask"></i></span>
-              <input type="text" class="form-control" placeholder="Experience, e.g. 5">
-              <span class="input-group-addon">Years</span>
-            </div>
-          </div>
-
-          <div class="form-group col-xs-12 col-sm-6 col-md-4">
-            <div class="input-group input-group-sm">
-              <span class="input-group-addon"><i class="fa fa-certificate"></i></span>
-              <select class="form-control selectpicker" multiple>
-                <option>Postdoc</option>
-                <option>Ph.D.</option>
-                <option>Master</option>
-                <option selected>Bachelor</option>
-              </select>
-            </div>
-          </div>
-
+          
+          
 
         </div>
 
@@ -327,12 +304,12 @@ body::-webkit-scrollbar-track
           <div class="container">
 
             <header class="section-header">
-              <span>Description</span>
-              <h2>Job detail</h2>
+            
+              <h2><img style ="margin-right:20px;" src="{{asset('img/dog-training.png')}}" alt="">Dog Caring Skills</h2>
               <p>Write about your company, job description, skills required, benefits, etc.</p>
             </header>
             
-            <textarea class="summernote-editor"></textarea>
+           
 
           </div>
         </section>
