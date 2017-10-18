@@ -46,7 +46,7 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
 
-                            <li><a class="btn btn-next btn-fill btn-danger btn-wd" style ="color:#fff;" href="{{ route('sitters.login') }}">Already Registered ?</a></li>
+                            <li><a class="btn btn-next btn-fill btn-danger btn-wd" style ="color:#fff;" href="{{ route('sitter.register') }}">Not A Sitter ?</a></li>
 
                         @else
                             <li class="dropdown">
@@ -111,7 +111,7 @@
                 <!--      Wizard container        -->
                 <div class="wizard-container">
                     <div class="card wizard-card" data-color="red" id="wizard">
-                      {{Form::open(['route' => 'sitter.register'])}}
+                      {{Form::open(['route' => 'sitters.login'])}}
                         {{ csrf_field() }}
                     <!--        You can switch " data-color="red" "  with one of the next bright colors: "blue", "azure", "red", "red"       -->
 
@@ -160,136 +160,7 @@
                                      </div>
                                   </div>
                                 </div>
-                                <div class="tab-pane" id="type">
-                                    <h5 class="info-text">What type of Boarding house  do you have? </h5>
-                                    <div class="row">
-                                        <div class="col-sm-8 col-sm-offset-2">
-                                            <div class="col-sm-4 col-sm-offset-2">
-                          <div class="choice" data-toggle="wizard-checkbox">
-                                                    <input type="checkbox" name="house" value="home">
-                                                    <div class="card card-checkboxes card-hover-effect">
-                                                        <i class="ti-home"></i>
-                              <p>Home</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                          <div class="choice" data-toggle="wizard-checkbox">
-                                                    <input type="checkbox" name="house" value="apartment">
-                                                    <div class="card card-checkboxes card-hover-effect">
-                                                        <i class="ti-package"></i>
-                              <p>Apartment</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-sm-5 col-sm-offset-1">
-                                          <div class="form-group">
-                                              <label>Contant Number</label>
-                                               <input id="name" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}" required autofocus>
-                                          </div>
-                                      </div>
-
-                                      <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Whatsapp Number</label>
-                                               <input id="name" type="text" class="form-control" name="whatsapp_number" value="{{ old('whatsapp_number') }}" autofocus>
-                                          </div>
-                                      </div>
-
-                                      <div class="col-sm-10 col-sm-offset-1">
-                                          <div class="form-group">
-                                              <label>Residential Address</label>
-
-                                              <textarea class="form-control" name ="res_address" placeholder="" value="{{ old('res_address') }}" required rows="4"></textarea>
-                                          </div>
-                                      </div>
-
-
-                                      <div class="col-sm-5 col-sm-offset-1">
-
-                                            <div class="form-group">
-                                                <label>Your City/Town</label>
-                                                <select class="form-control" name ="city">
-
-                                                    <option selected="">JHB</option>
-                                                    <option>Pretoria </option>
-                                                    <option>Ruimsig</option>
-                                                </select>
-                                            </div>
-
-                                      </div>
-
-                                      <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Post Code</label>
-                                               <input id="name" type="text" class="form-control" name="postcode" value="{{ old('postcode') }}" autofocus>
-                                          </div>
-                                      </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="facilities">
-                                    <h5 class="info-text">Tell us more about your Dog caring skills. </h5>
-                                    <div class="row">
-                                        <div class="col-sm-5 col-sm-offset-1">
-                                          <div class="form-group">
-                                              <label>Do you have dogs</label>
-                                              <select class="form-control" name ="dogs">
-
-                                                  <option selected>Yes</option>
-                                                  <option>No </option>
-
-                                              </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Do you offer outdoor access ?</label>
-                                              <select class="form-control" name="outdoor">
-                                                  <option disabled="" selected="">- response -</option>
-                                                  <option>Yes</option>
-                                                  <option>No </option>
-                                              </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-5 col-sm-offset-1">
-                                          <div class="form-group" >
-                                              <label>Do you offer walks with the dogs</label>
-                                              <select class="form-control" name ="dogwalks">
-                                                  <option disabled="" selected="">- response -</option>
-                                                  <option>Yes</option>
-                                                  <option>No </option>
-                                              </select>
-                                          </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Do you offer food?</label>
-                                              <select class="form-control" name ="food">
-                                                  <option disabled="" selected="">- response -</option>
-                                                  <option>Yes</option>
-                                                  <option>No </option>
-                                              </select>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane" id="description">
-                                    <div class="row">
-                                        <h5 class="info-text"> Drop us a small description. </h5>
-                                        <div class="col-sm-10 col-sm-offset-1">
-                                            <div class="form-group">
-                                                <label>Short Bio</label>
-
-                                                <textarea class="form-control" name ="bio" placeholder="" value="{{ old('email') }}" required rows="9"></textarea>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                              
                       
                         </form>
                     </div>
