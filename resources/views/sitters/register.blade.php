@@ -147,24 +147,30 @@
                                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                                             </div>
                                         </div>
-                                        <div class="col-sm-5">
+
+                                        <div class="col-sm-4 ">
+                        <div class="picture-container">
+                          <div class="picture">
+                            <img src="{{asset('img/default-avatar.jpg')}}" class="picture-src" id="wizardPicturePreview" title="" />
+                            <input type="file" id="wizard-picture">
+                          </div>
+                          <h6>Choose Picture</h6>
+                        </div>
+                      </div>
+                                        <div class="col-sm-5 col-sm-offset-1">
                                             <div class="form-group">
                                                 <label>Email address</label>
                                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
                                             </div>
                                         </div>
-                                        <div class="col-sm-5 col-sm-offset-1">
+                                        <div class="col-sm-5 ">
                                             <div class="form-group">
                                                 <label>Password</label>
                                                 <input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Password?" required>
                                             </div>
                                         </div>
-                                        <div class="col-sm-5">
-                                            <div class="form-group">
-                                                <label>Confirm Password</label>
-                                                <input type="password" class="form-control" id="exampleInputEmail1" required>
-                                            </div>
-                                        </div>
+                                       
+                                        
 
                                        
                                     </div>
