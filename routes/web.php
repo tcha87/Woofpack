@@ -11,12 +11,30 @@
 |
 */
 
+
+use App\Sitter as Sitter;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('gmaps', 'HomeController@gmaps');
 Auth::routes();
+
+Route::get('/sittergenerator',function ()
+{
+	$faker = Faker\factory::create();
+
+	for($i=0 ; $i<50; $i++){
+
+		$sitter = array('name'=>$faker->name,'email'=>$faker->email,'password'=>\Hash::make('password'),'phone_number'=>$faker->phoneNumber, 'whatsapp_number'=>$faker->phoneNumber,'res_address'=>$faker->address ,'city'=>$faker->city,'postcode'=>$faker->postcode,'dogs'=>'yes','outdoor'=> 'no','dogwalks'=>'no','food'=>'no','bio'=>'I am a stay at home mother with extensive animal care & training experience.'  );
+		Sitter::create($sitter);
+
+	}
+
+	
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -57,4 +75,6 @@ Route::get('sitters/dashboard',[
     'uses' =>'SitterController@index', 
     'as' => 'sitters.dashboard'
 ]);
+
+
 
