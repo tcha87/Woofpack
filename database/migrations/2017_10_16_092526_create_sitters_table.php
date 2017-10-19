@@ -20,7 +20,8 @@ class CreateSittersTable extends Migration
           $table->string('password');
           $table->string('phone_number');
           $table->string('whatsapp_number');
-         
+          $table->string('lat');
+          $table->string('lng');
           $table->string('res_address');
           $table->string('city');
           $table->string('postcode');

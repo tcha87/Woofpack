@@ -12,10 +12,10 @@ class Sitter extends Authenticatable
 
 
   protected $fillable = [
-      'name', 'email', 'password','phone_number','whatsapp_number','res_address','city','postcode','dogs','outdoor','dogwalks','food','bio',
+      'name', 'email', 'password','phone_number','whatsapp_number','lat','lng','res_address','city','postcode','dogs','outdoor','dogwalks','food','bio',
   ];
 
-  
+
    protected $hidden = [
        'password', 'remember_token',
    ];

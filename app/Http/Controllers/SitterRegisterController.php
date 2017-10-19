@@ -15,7 +15,7 @@ class SitterRegisterController extends Controller
     {
       $this->middleware('guest:sitter');
     }
-    
+
 
 
 	protected $redirectPath = 'sitters/dashboard';
@@ -40,12 +40,12 @@ class SitterRegisterController extends Controller
         'email'   => 'required|email',
         'password' => 'required|min:6'
       ]);
-      
+
       if (Auth::guard('sitter')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-       
+
         return redirect()->intended(route('sitters.dashboard'));
       }
-     
+
       return redirect()->back()->withInput($request->only('email', 'remember'));
     }
 
@@ -64,12 +64,16 @@ class SitterRegisterController extends Controller
 
      protected function create(array $data)
     {
+
+
         return Sitter::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'phone_number' => $data['phone_number'],
              'whatsapp_number' => $data['whatsapp_number'],
+						 'lat' => $data['lat'],
+						 'lng' => $data['lng'],
             'res_address' => $data['res_address'],
             'city' => $data['city'],
             'postcode' => $data['postcode'],
@@ -83,14 +87,14 @@ class SitterRegisterController extends Controller
     }
 
 
-    
 
-   
-   
+
+
+
     protected function guard()
    {
        return Auth::guard('sitter');
    }
 
- 
+
 }
