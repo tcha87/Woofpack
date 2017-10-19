@@ -133,6 +133,22 @@ body::-webkit-scrollbar-track
 
         <!-- User account -->
         <div class="pull-right user-login">
+          <div class="pull-right">
+
+          <div class="dropdown user-account">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+             <img src="{{asset('img/logo.png')}}" alt="logo">
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="user-login.html">Login</a></li>
+              <li><a href="user-register.html">Register</a></li>
+              <li><a href="user-forget-pass.html">Forget pass</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div>
+
+        </div>
          
           <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -319,12 +335,14 @@ body::-webkit-scrollbar-track
         <section class="bg-alt">
           <div class="container">
             <header class="section-header">
-              <span>Are you done?</span>
-              <h2>Submit Job</h2>
+           
+              <h2><img style ="margin-right:40px;" src="{{asset('img/dog-training.png')}}" alt="">Location Details</h2>
               <p>Please review your information once more and press the below button to put your job online.</p>
             </header>
 
-            <p class="text-center"><button class="btn btn-success btn-xl btn-round">Submit your job</button></p>
+
+
+            <p class="text-center"><button class="btn btn-success btn-xl btn-round">Update your profile</button></p>
 
           </div>
         </section>

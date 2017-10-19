@@ -18,11 +18,15 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="{{asset('css/themify-icons.css')}}" rel="stylesheet">
+    <style type="text/css" media="screen">
+      
+    </style>
 
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyAHShDo_C4WnrDy7Ssqr5ZRn2DDolRGg8A&sensor=false&amp;libraries=places"></script>
 </head>
-
+<div class="js"
 <body>
+   <div id="preloader"></div>
     <div class="image-container set-full-height" style="background-image: url({{asset('img/bg-banner1s.jpg')}})">
         <nav class="navbar" style="padding-top:30px;">
             <div class="container">
@@ -321,7 +325,7 @@
         <!--  big container -->
 
 </body>
-
+</div>
 <!--   Core JS Files   -->
 <script src="{{asset('js/jquery-2.2.4.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -332,6 +336,14 @@
 
 <!--   <!--  More information about jquery.validate here: http://jqueryvalidation.org/  -->
 <script src="{{asset('js/jquery.validate.min.js')}}" type="text/javascript"></script>
+<script>jQuery(document).ready(function($) {  
+
+// site preloader -- also uncomment the div in the header and the css style for #preloader
+$(window).load(function(){
+  $('#preloader').fadeOut('slow',function(){$(this).remove();});
+});
+
+});</script>
 <script>
     /* script */
     function initialize() {
@@ -402,3 +414,4 @@
 </script>
 
 </html>
+
