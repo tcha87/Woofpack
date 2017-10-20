@@ -28,9 +28,7 @@
             <input type="text" class="form-control input-lg" value ="{{ Auth::guard('sitter')->user()->name }} ">
           </div>
 
-          <div class="form-group col-xs-12">
-            <textarea class="form-control" rows="3" placeholder="{{ Auth::guard('sitter')->user()->bio }}"></textarea>
-          </div>
+      
 
           <div class="form-group col-xs-12">
              <label>Bio</label>

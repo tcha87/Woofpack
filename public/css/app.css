@@ -11111,7 +11111,7 @@ select.selectpicker {
 .btn-primary:focus,
 .btn-primary:hover {
     color: #fff;
-    background-color: #DA4C33 
+    background-color: #DA4C33
 }
 .btn-success {
     background-color: #7ec855;
@@ -11283,7 +11283,7 @@ select.selectpicker {
     border-width: 1px
 }
 .btn-outline.btn-primary {
-    color: #E45F47 
+    color: #E45F47
 }
 .btn-outline.btn-success {
     color: #7ec855
@@ -11371,7 +11371,7 @@ select.selectpicker {
 #scroll-up,
 .btn-navbar:hover {
     color: #fff;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 #scroll-up {
     position: fixed;
@@ -11644,7 +11644,7 @@ form .text-muted {
 .checkbox input[type=checkbox]:checked+label:before,
 .checkbox input[type=radio]:checked+label:before {
     background-color: #E45F47 ;
-    border-color: #E45F47 
+    border-color: #E45F47
 }
 .checkbox input[type=checkbox]:disabled+label,
 .checkbox input[type=radio]:disabled+label {
@@ -11688,16 +11688,16 @@ form .text-muted {
     z-index: 1
 }
 .radio input[type=radio]+label:after {
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .radio input[type=radio]:checked+label:after {
     -webkit-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1);
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .radio input[type=radio]:checked+label:before {
-    border-color: #E45F47 
+    border-color: #E45F47
 }
 .radio input[type=radio]:disabled+label {
     opacity: .65
@@ -11881,12 +11881,12 @@ form .text-muted {
 .pagination>li>span:focus,
 .pagination>li>span:hover {
     color: #fff;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .pagination>.active>a,
 .pagination>.active>a:focus,
 .pagination>.active>a:hover {
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .pagination.no-shadow {
     -webkit-box-shadow: none;
@@ -11916,7 +11916,7 @@ form .text-muted {
 .pager li>span:focus,
 .pager li>span:hover {
     color: #fff;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .pager .previous .fa,
 .pager .previous [class^=ti-] {
@@ -11998,7 +11998,7 @@ form .text-muted {
 }
 .progress-bar {
     position: relative;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .progress-bar:before {
     z-index: 1;
@@ -12006,7 +12006,7 @@ form .text-muted {
     right: -5px;
     width: 10px;
     height: 10px;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .progress-bar:after,
 .progress-bar:before {
@@ -12103,7 +12103,7 @@ h5 a:focus,
 h5 a:hover,
 h6 a:focus,
 h6 a:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 h1 .small,
 h1 small,
@@ -12399,7 +12399,7 @@ dl.icon-holder dd {
 }
 .faq-items h4,
 .faq-items h5 {
-    color: #E45F47 
+    color: #E45F47
 }
 .faq-items p {
     color: #949ca3;
@@ -12863,7 +12863,7 @@ dl.icon-holder dd {
     -o-transform: none;
     transform: none;
     color: #fff;
-    padding-top: 60px
+    
 }
 .page-header .header-detail .logo {
     float: left;
@@ -12986,7 +12986,7 @@ dl.icon-holder dd {
     transition: .2s linear
 }
 .details li a:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 .details .fa,
 .details [class^=ti-] {
@@ -13053,7 +13053,7 @@ dl.icon-holder dd {
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .timeline li:last-child {
     border-bottom: none
@@ -13090,7 +13090,7 @@ dl.icon-holder dd {
     color: #7e8890
 }
 .timeline h4 a:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 .skills {
     list-style: none;
@@ -13182,7 +13182,7 @@ dl.icon-holder dd {
 .item-block header h4 a:hover,
 .item-block header h5 a:hover,
 .item-block header h6 a:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 .item-block header h4 {
     color: #000
@@ -13497,7 +13497,7 @@ dl.icon-holder dd {
     padding: 0 2px
 }
 .nav-menu>li:hover>a {
-    color: #E45F47 
+    color: #E45F47
 }
 .nav-menu a {
     display: inline-block;
@@ -13639,7 +13639,7 @@ dl.icon-holder dd {
 .user-account .dropdown-menu li>a.active,
 .user-account .dropdown-menu li>a:hover {
     background-color: #fff;
-    color: #E45F47 
+    color: #E45F47
 }
 .user-account .dropdown-menu li:last-child>a {
     border-bottom: 0
@@ -13748,7 +13748,7 @@ dl.icon-holder dd {
 .sticky-nav.body-scrolled .navbar .navbar-toggle.active,
 .sticky-nav.body-scrolled .navbar .navbar-toggle:focus,
 .sticky-nav.body-scrolled .navbar .navbar-toggle:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 .smart-nav.body-scrolled .navbar .logo,
 .sticky-nav.body-scrolled .navbar .logo {
@@ -13764,13 +13764,13 @@ dl.icon-holder dd {
 }
 .smart-nav.body-scrolled .navbar .user-login a:not(.btn),
 .sticky-nav.body-scrolled .navbar .user-login a:not(.btn) {
-    color: #E45F47 
+    color: #E45F47
 }
 .sticky-nav.body-scrolled .navbar {
     top: 0
 }
 .offcanvas-show .navbar-toggle {
-    color: #E45F47 
+    color: #E45F47
 }
 .offcanvas-backdrop {
     position: fixed;
@@ -14273,7 +14273,7 @@ section.no-overlay:before {
 .social-icons a:focus,
 .social-icons a:hover {
     color: #fff;
-    background-color: #E45F47 
+    background-color: #E45F47
 }
 .social-icons.size-sm a {
     line-height: 34px;
@@ -14553,7 +14553,7 @@ section.no-overlay:before {
     color: #818a91
 }
 .post-meta a:hover {
-    color: #E45F47 
+    color: #E45F47
 }
 #comments {
     margin-top: 80px
